@@ -52,7 +52,7 @@
               <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
               <% @comments.each do |comment|%>
               <p>
-          <strong><%= link_to comment.user.name, user_path(comment.id), class: :comment_user  %>：</strong>
+          <strong><%= link_to comment.user.name, user_path(@prototype.user.id), class: :comment_user  %>：</strong>
           <%= comment.content %>
         </p>
         <%end%>
