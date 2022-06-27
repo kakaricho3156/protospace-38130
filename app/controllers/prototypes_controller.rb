@@ -40,7 +40,7 @@ class PrototypesController < ApplicationController
   def update
     @prototype=Prototype.find(params[:id])
     if @prototype.update_attributes(prototype_params)
-      redirect_to :root
+      redirect_to  action: :show
     else
       render :edit
     end
